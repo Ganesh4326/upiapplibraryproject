@@ -1,6 +1,12 @@
 plugins {
-    id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.dagger.hilt)
+    alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.jacoco)
+//    id("com.android.library")
+//    id("org.jetbrains.kotlin.android")
     id("maven-publish")
 }
 
@@ -45,6 +51,50 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity.compose)
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.ui.graphics)
+    implementation(libs.androidx.ui.tooling.preview)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.dagger.hilt.android)
+    implementation(libs.zxing.core)
+    kapt(libs.dagger.hilt.android.compiler)
+    implementation(libs.number.keyboard)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    debugImplementation(libs.androidx.ui.tooling)
+    debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.form.builder)
+
+    androidTestImplementation(libs.hilt.android.testing)
+    kaptAndroidTest(libs.hilt.compiler)
+    androidTestImplementation(libs.okhttp.mockwebsever)
+
+    implementation(libs.bundles.coil)
+    implementation(libs.ssjetpackcomposeprogressbutton)
+    implementation(libs.mockk)
+    implementation(libs.mockk.android)
+
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.loggin.interceptor)
+    implementation(libs.runtime.livedata)
+    implementation(libs.dotenv.kotlin)
+    implementation(libs.moshi)
+    implementation(libs.moshi.kotlin)
+    kapt(libs.moshi.kotlin.codegen)
+//    implementation(libs.amplify.framework.auth.cognito)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
+
+    implementation("aws.smithy.kotlin:http-client-engine-okhttp4:1.3.32")
+
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
