@@ -4,4 +4,7 @@ class SampleDataClass {
     fun displaySampleData(){
 
     }
+
+    fun displaySampleDataTwo() {}
+    
 }

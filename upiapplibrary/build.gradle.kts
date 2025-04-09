@@ -59,21 +59,11 @@ afterEvaluate {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.schematix.cryptoupiapp.upiapplibrary"
+                groupId = "com.github.Ganesh4326"
                 artifactId = "upiapplibrary"
-                version = "1.0.0"
+                version = "v1.0.0"
             }
-
-            create<MavenPublication>("debug") {
-                from(components["debug"])
-                groupId = "com.schematix.cryptoupiapp.upiapplibrary"
-                artifactId = "upiapplibrary"
-                version = "1.0.0"
-            }
-        }
-
-        repositories {
-            mavenLocal()
         }
     }
 }
+
