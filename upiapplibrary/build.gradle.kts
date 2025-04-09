@@ -119,7 +119,14 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.Ganesh4326"
                 artifactId = "upiapplibrary"
-                version = "v2.0.4"
+                version = "v2.0.5"
+            }
+
+            create<MavenPublication>("debug") {
+                from(components["debug"])
+                groupId = "com.github.Ganesh4326"
+                artifactId = "upiapplibrary"
+                version = "v2.0.5"
             }
         }
     }
