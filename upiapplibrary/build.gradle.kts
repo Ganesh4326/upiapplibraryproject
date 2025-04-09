@@ -119,7 +119,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.Ganesh4326"
                 artifactId = "upiapplibrary"
-                version = "v2.0.0"
+                version = "v2.0.3"
             }
         }
     }
