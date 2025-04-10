@@ -57,8 +57,10 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation(libs.androidx.activity.compose)
+    implementation(libs.runtime.livedata)
     implementation(libs.androidx.foundation.android)
     implementation(libs.androidx.material3.android)
+    implementation(libs.ssjetpackcomposeprogressbutton)
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -72,7 +74,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.Ganesh4326"
                 artifactId = "upiapplibrary"
-                version = "v2.0.7"
+                version = "v2.0.8"
             }
         }
     }
