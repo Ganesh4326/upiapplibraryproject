@@ -72,7 +72,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.Ganesh4326"
                 artifactId = "upiapplibrary"
-                version = "v2.0.6"
+                version = "v2.0.7"
             }
         }
     }
