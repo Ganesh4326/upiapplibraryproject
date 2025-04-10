@@ -1,6 +1,6 @@
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.kotlin.android)
     id("maven-publish")
 }
 
@@ -34,12 +34,20 @@ android {
         jvmTarget = "11"
     }
 
+
     publishing {
         singleVariant("release") {
             withSourcesJar()
         }
         singleVariant("debug") {
             withSourcesJar()
+        }
+    }
+
+    packaging {
+        resources {
+            excludes += "META-INF/LICENSE.md"
+            excludes += "META-INF/LICENSE-notice.md"
         }
     }
 }
